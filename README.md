@@ -1,7 +1,6 @@
 # Async Race
 
 **Score (self-assessed): 395 / 400**
-*(Excludes the 100-point discretionary "Overall Code Quality" section — the task instructions say to skip that during self-check, since the reviewer scores it separately.)*
 
 **Live demo:** https://grigo-o.github.io/async-race/
 *(Assumes the GitHub repo is named `async-race` under the `Grigo-o` account — see [Deployment](#deployment) below if the repo name differs, since the Vite `base` path must match exactly.)*
