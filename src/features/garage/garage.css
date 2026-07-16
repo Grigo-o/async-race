@@ -1,0 +1,312 @@
+.garage-view {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.garage-view h1 {
+  position: relative;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.garage-view h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-asphalt);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.55) 6px,
+    rgba(255, 255, 255, 0.55) 11px
+  );
+}
+
+.form-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.car-form {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 240px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.car-form input[type='text'] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.car-form input[type='text']:focus {
+  border-color: var(--color-go-dark);
+}
+
+.car-form input[type='color'] {
+  width: 40px;
+  height: 36px;
+  padding: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: none;
+}
+
+.car-form button[type='submit'] {
+  background: var(--color-asphalt);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.car-form button[type='submit']:not(:disabled):hover {
+  background: var(--color-asphalt-light);
+}
+
+.car-form button[type='submit']:disabled {
+  background: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: var(--color-stop-dark);
+  font-weight: 500;
+}
+
+.race-controls {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.race-controls button {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: filter 0.15s ease;
+}
+
+.race-controls button:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+.race-controls button:disabled {
+  opacity: 0.45;
+}
+
+.race-controls button:nth-child(1) {
+  background: var(--color-go);
+}
+
+.race-controls button:nth-child(2) {
+  background: var(--color-asphalt);
+}
+
+.race-controls button:nth-child(3) {
+  background: var(--color-asphalt-light);
+}
+
+.car-count {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 3rem 0;
+  font-weight: 500;
+}
+
+.garage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.car-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease;
+}
+
+.car-item--selected {
+  border-color: var(--color-go-dark);
+  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.15);
+}
+
+.car-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.car-controls button {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+.car-controls button:disabled {
+  opacity: 0.4;
+}
+
+.car-controls button:nth-of-type(3) {
+  background: var(--color-go);
+  border-color: var(--color-go);
+  color: #fff;
+}
+
+.car-controls button:nth-of-type(4) {
+  background: var(--color-stop);
+  border-color: var(--color-stop);
+  color: #fff;
+}
+
+.car-controls button:nth-of-type(3):not(:disabled):hover,
+.car-controls button:nth-of-type(4):not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+.car-name {
+  font-weight: 600;
+  margin-left: auto;
+  font-size: 0.95rem;
+}
+
+.car-track {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-asphalt);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 18px,
+    rgba(255, 255, 255, 0.35) 18px,
+    rgba(255, 255, 255, 0.35) 32px
+  );
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+.car-icon {
+  position: absolute;
+  top: 7px;
+  width: 40px;
+  height: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.finish-line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-image: conic-gradient(
+    var(--color-text) 90deg,
+    #fff 90deg 180deg,
+    var(--color-text) 180deg 270deg,
+    #fff 270deg
+  );
+  background-size: 10px 10px;
+}
+
+.winner-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-asphalt);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+  overflow: hidden;
+}
+
+.winner-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background-image: conic-gradient(
+    #fff 90deg,
+    transparent 90deg 180deg,
+    #fff 180deg 270deg,
+    transparent 270deg
+  );
+  background-size: 12px 12px;
+}
+
+.winner-banner span {
+  color: var(--color-finish);
+}
+
+.winner-banner button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+}
+
+@media (max-width: 500px) {
+  .form-panel {
+    flex-direction: column;
+  }
+
+  .car-controls {
+    font-size: 0.85rem;
+  }
+
+  .car-name {
+    width: 100%;
+    margin-left: 0;
+    order: -1;
+  }
+}

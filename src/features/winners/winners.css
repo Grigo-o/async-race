@@ -1,0 +1,105 @@
+.winners-view {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.winners-view h1 {
+  position: relative;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.winners-view h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-asphalt);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.55) 6px,
+    rgba(255, 255, 255, 0.55) 11px
+  );
+}
+
+.winner-count {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.winners-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.winners-table th {
+  background: var(--color-asphalt);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+}
+
+.winners-table td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.winners-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.winners-table tbody tr:nth-child(even) {
+  background: var(--color-bg);
+}
+
+.winners-table td:nth-child(4),
+.winners-table td:nth-child(5) {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.winners-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease;
+}
+
+.winners-table th.sortable:hover {
+  color: var(--color-finish);
+}
+
+.car-icon-small {
+  display: inline-block;
+  width: 26px;
+  height: 17px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+  .winners-table {
+    font-size: 0.8rem;
+  }
+
+  .winners-table th,
+  .winners-table td {
+    padding: 0.5rem 0.6rem;
+  }
+}
